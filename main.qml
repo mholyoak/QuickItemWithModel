@@ -1,6 +1,5 @@
 import QtQuick 2.9
 import QtQuick.Window 2.2
-import name.holyoak 1.0
 
 Window {
     title: qsTr("Hello World")
@@ -48,7 +47,6 @@ Window {
 
                 onFocusChanged: if (activeFocus) {
                                     console.log("Focus Changed " + model.name)
-                                    //quickItem.itemModelSelected(model.name)
                                     mainWinId.itemSelectionChanged(model.name)
                                 }
             }
@@ -56,7 +54,6 @@ Window {
 
         Text {
             id: notifyTextId
-            //anchors.top: titleTextId.bottom
             anchors.left: nameListId.right
             y: titleTextId.y + titleTextId.height * 2
             width: 300
