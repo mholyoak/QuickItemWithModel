@@ -39,8 +39,8 @@ int ItemModel::rowCount(const QModelIndex & /*parent*/) const
 }
 
 
-QuickItemWithModel::QuickItemWithModel(QQuickItem *parent):
-    QQuickItem(parent),
+QuickItemWithModel::QuickItemWithModel(QObject *parent):
+    QObject(parent),
     title_("Custom Menu")
 {
 }

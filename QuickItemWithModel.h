@@ -26,7 +26,7 @@ private:
 };
 
 
-class QuickItemWithModel : public QQuickItem
+class QuickItemWithModel : public QObject
 {
     Q_OBJECT
 
@@ -37,7 +37,7 @@ class QuickItemWithModel : public QQuickItem
     ItemModel itemModel_;
 
 public:
-    explicit QuickItemWithModel(QQuickItem *parent = nullptr);
+    explicit QuickItemWithModel(QObject *parent = nullptr);
     virtual ~QuickItemWithModel() = default;
 
     QString title() const;
